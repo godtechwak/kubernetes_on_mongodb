@@ -11,6 +11,11 @@ kctl apply -f mongodb-service.yaml
 ```bash
 kctl apply -f mongodb-statefulset.yaml
 ```
+### 4. MongoDB Client 설치
+```bash
+kctl apply -f mongodb-client.yaml
+```
+
 # *MongoDB 레플리카셋 쿠버네티스 접속 방법*
 ### 1. mongos가 설치된 pod 터미널 접속
 ```bash
