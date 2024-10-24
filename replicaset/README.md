@@ -22,5 +22,5 @@ mongosh mongodb://mongodb-0.mongodb.mongodb.svc.cluster.local:27017
 ```
 ### 3. 레플리카셋 초기화
 ```bash
-$ rs.initiate()
+rs.initiate()
 ```
