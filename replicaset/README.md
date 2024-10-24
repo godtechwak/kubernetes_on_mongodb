@@ -27,7 +27,14 @@ mongosh mongodb://mongodb-0.mongodb.mongodb.svc.cluster.local:27017
 ```
 ### 3. 레플리카셋 초기화
 ```bash
-rs.initiate()
+rs.initiate({
+  _id: "rs0",  // 레플리카셋의 이름
+  members: [
+    { _id: 0, host: "mongodb-0.mongodb:27017" },  // 첫 번째 노드
+    { _id: 1, host: "mongodb-1.mongodb:27017" },  // 두 번째 노드
+    { _id: 2, host: "mongodb-2.mongodb:27017" }   // 세 번째 노드
+  ]
+});
 ```
 ### 4. 레플리카셋 상태 확인
 ```bash
