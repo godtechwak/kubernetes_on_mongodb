@@ -154,3 +154,13 @@ rs.status()
   operationTime: Timestamp({ t: 1729759994, i: 1 })
 }
 ```
+### 5. admin 유저 생성
+```bash
+$ use admin
+$ db.createUser({user:'admin', pwd:'admin', roles:[{role:'root', db:'admin'}]})
+```
+### 6. admin 유저로 접속
+```bash
+$ mongosh -u admin --host 'mongodb-0.mongodb.mongodb.svc.cluster.local:27017'
+```
+
