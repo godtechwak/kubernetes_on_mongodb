@@ -11,3 +11,7 @@ data:
       port: 27017
     replication:
       replSetName: "rs0"
+    systemLog:
+      destination: file
+      path: /db/log/mongod.log
+      logAppend: true
